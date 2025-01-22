@@ -1,16 +1,17 @@
 # bilytica_assignment
 
-A new Flutter project.
+Bilytica Flutter assignment completed by Muhammad Faheem Amin
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+### Paginated API Calls:
+Fetches user data from the API with pagination, loading additional pages as the user scrolls.
+### Infinite Scrolling:
+Automatically loads more data seamlessly when scrolling reaches the end of the current list.
+### State Management:
+Utilized Bloc for predictable and scalable state handling.
+### Clean Architecture
+Utilized clean architecture for separation of concerns
+### Dio Integration:
+API calls using the Dio package.
+### Performance:
+Optimized for smooth scrolling and fast data loading without any noticeable lag.
