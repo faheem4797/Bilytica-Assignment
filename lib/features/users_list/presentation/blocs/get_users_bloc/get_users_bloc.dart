@@ -18,6 +18,7 @@ class GetUsersBloc extends Bloc<GetUsersEvent, GetUsersState> {
 
   FutureOr<void> _fetchUsers(
       FetchUsers event, Emitter<GetUsersState> emit) async {
+    //returns in case data is already being fetched
     if (state.getUsersStatus == GetUsersStatus.loading && state.page != 1) {
       return;
     }
@@ -34,7 +35,8 @@ class GetUsersBloc extends Bloc<GetUsersEvent, GetUsersState> {
       (r) => emit(state.copyWith(
           getUsersStatus: GetUsersStatus.success,
           users: List.from(state.users)..addAll(r),
-          page: state.page + 1)),
+          page: state.page +
+              1)), // moves to next page in case of successful data fetching
     );
   }
 }

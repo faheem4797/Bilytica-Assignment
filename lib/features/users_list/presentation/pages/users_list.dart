@@ -40,6 +40,7 @@ class UsersList extends StatelessWidget {
                             itemCount: state.users.length,
                             shrinkWrap: false,
                             itemBuilder: (context, index) {
+                              // starts fetching data again when second last item is comes on screen
                               if (index == state.users.length - 2) {
                                 context
                                     .read<GetUsersBloc>()

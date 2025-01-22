@@ -17,8 +17,10 @@ class UserModel extends User {
       age: map['dob']['age'].toString(),
       location: '${map['location']['city']}, ${map['location']['state']}',
       profileImageLink: map['picture']['thumbnail'] ?? '',
-      date: getRandomItemFromList(Constants.dateTimes),
-      dateIdea: getRandomItemFromList(Constants.dateIdeas),
+      date: getRandomItemFromList(Constants
+          .dateTimes), //Gets a random date and time from the list in the Constants class
+      dateIdea: getRandomItemFromList(Constants
+          .dateIdeas), //Gets a random date idea from the list in the Constants class
     );
   }
 }

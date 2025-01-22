@@ -17,6 +17,7 @@ class UserRepositoryImpl implements UserRepository {
   @override
   Future<Either<Failure, List<User>>> getUsers({required int page}) async {
     try {
+      //Checks if internet connection is available
       if (!await connectionChecker.isConnected) {
         return left(const Failure(Constants.noConnectionErrorMessage));
       }
